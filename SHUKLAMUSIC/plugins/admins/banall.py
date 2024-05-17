@@ -1,4 +1,4 @@
-from VIPMUSIC import app
+from SHUKLAMUSIC import app
 from config import OWNER_ID
 from pyrogram import filters, enums
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton

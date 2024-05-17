@@ -59,7 +59,7 @@ async def auto_end():
                     continue
                 autoend[chat_id] = {}
                 try:
-                    await VIP.stop_stream(chat_id)
+                    await SHUKLA.stop_stream(chat_id)
                 except:
                     continue
                 try:

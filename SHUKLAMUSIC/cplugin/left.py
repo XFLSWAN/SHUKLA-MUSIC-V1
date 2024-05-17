@@ -19,7 +19,7 @@ from pyrogram.enums import ParseMode
 from pyrogram import *
 from pyrogram.types import *
 from logging import getLogger
-from SHUKLAMUSIC.utils.vip_ban import admin_filter
+from SHUKLAMUSIC.utils.shukla_ban import admin_filter
 from SHUKLAMUSIC import app
 from pyrogram import filters
 from pyrogram.errors import RPCError

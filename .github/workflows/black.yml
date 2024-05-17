@@ -19,6 +19,6 @@ jobs:
             commit_message: "Auto fixes"
             commit_options: "--no-verify"
             repository: .
-            commit_user_name: hSHUKLA
-            commit_user_email: RDSHUKLA@users.noreply.github.com
-            commit_author: RSHUKLA <RSHUKLA@users.noreply.github.com>
+            commit_user_name: XFLSWAN
+            commit_user_email: XFLSWAN@users.noreply.github.com
+            commit_author: XFLSWAN <XFLSWAN@users.noreply.github.com>

@@ -5,7 +5,7 @@ from pyrogram.enums import ChatType
 
 import config
 from SHUKLAMUSIC import app
-from SHUKLAMUSIC.core.call import VIP, autoend
+from SHUKLAMUSIC.core.call import SHUKLA, autoend
 from SHUKLAMUSIC.utils.database import get_client, is_active_chat, is_autoend
 
 

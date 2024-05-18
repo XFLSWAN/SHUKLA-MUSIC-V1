@@ -5,7 +5,7 @@ from SHUKLAMUSIC import YouTube, app
 from SHUKLAMUSIC.core.call import SHUKLA
 from SHUKLAMUSIC.misc import db
 from SHUKLAMUSIC.utils import AdminRightsCheck, seconds_to_min
-from VIPMUSIC.utils.inline import close_markup
+from SHUKLAMUSIC.utils.inline import close_markup
 from config import BANNED_USERS
 
 

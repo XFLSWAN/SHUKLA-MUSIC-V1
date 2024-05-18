@@ -33,7 +33,7 @@ suggdb = mongodb.suggestion
 cleandb = mongodb.cleanmode
 queriesdb = mongodb.queries
 userdb = mongodb.userstats
-videodb = mongodb.vipvideocalls
+videodb = mongodb.shuklavideocalls
 
 # Shifting to memory [mongo sucks often]
 active = []

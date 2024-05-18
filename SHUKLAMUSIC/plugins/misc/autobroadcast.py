@@ -25,13 +25,7 @@ BUTTONS = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(
                 "๏ ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ ๏",
-                url=f"https://t.me/StrangerSuperbot?startgroup=true",
-            )
-        ]
-        [
-            InlineKeyboardButton(
-                "๏ ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ ๏",
-                url=f"https://t.me/Melaniarobot?startgroup=true",
+                url=f"https://t.me/Itz_SapnaMusicbot?startgroup=s&admin=delete_messages+manage_video_chats+pin_messages+invite_users",
             )
         ]
     ]

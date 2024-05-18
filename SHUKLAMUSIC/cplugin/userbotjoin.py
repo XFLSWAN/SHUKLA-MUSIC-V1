@@ -1,6 +1,6 @@
 import asyncio
-from VIPMUSIC.misc import SUDOERS
-from VIPMUSIC.core.userbot import Userbot
+from SHUKLAMUSIC.misc import SUDOERS
+from SHUKLAMUSIC.core.userbot import Userbot
 from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant
 import asyncio

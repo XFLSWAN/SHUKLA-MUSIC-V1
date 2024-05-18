@@ -26,7 +26,7 @@ suggdb = mongodb.suggestion
 cleandb = mongodb.cleanmode
 queriesdb = mongodb.queries
 userdb = mongodb.userstats
-videodb = mongodb.vipvideocalls
+videodb = mongodb.shuklavideocalls
 chatsdbc = mongodb.chatsc  # for clone
 usersdbc = mongodb.tgusersdbc  # for clone
 

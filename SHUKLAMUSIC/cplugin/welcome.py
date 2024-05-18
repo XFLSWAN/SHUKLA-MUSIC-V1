@@ -18,7 +18,7 @@ from SHUKLAMUSIC import userbot
 from SHUKLAMUSIC.misc import SUDOERS
 from pyrogram import *
 from pyrogram.types import *
-from SHUKLAMUSIC.utils.vip_ban import admin_filter
+from SHUKLAMUSIC.utils.shukla_ban import admin_filter
 import random
 from pyrogram import Client, filters
 from pyrogram.types import ChatJoinRequest, InlineKeyboardButton, InlineKeyboardMarkup

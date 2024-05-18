@@ -134,7 +134,7 @@ async def restart_bots():
                 API_ID,
                 API_HASH,
                 bot_token=bot_token,
-                plugins=dict(root="VIPMUSIC.cplugin"),
+                plugins=dict(root="SHUKLAMUSIC.cplugin"),
             )
             await ai.start()
             bot = await ai.get_me()

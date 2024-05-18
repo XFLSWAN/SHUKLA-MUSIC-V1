@@ -33,18 +33,18 @@ async def github(_, message):
                 followers = result["followers"]
                 following = result["following"]
 
-                caption = f"""ɢɪᴛʜᴜʙ ɪɴғᴏ ᴏғ {name}
+                caption = f"""❖ɢɪᴛʜᴜʙ ɪɴғᴏ ᴏғ {name} ❖
                 
-ᴜsᴇʀɴᴀᴍᴇ: {username}
-ʙɪᴏ: {bio}
-ʟɪɴᴋ: [Here]({url})
-ᴄᴏᴍᴩᴀɴʏ: {company}
-ᴄʀᴇᴀᴛᴇᴅ ᴏɴ: {created_at}
-ʀᴇᴩᴏsɪᴛᴏʀɪᴇs: {repositories}
-ʙʟᴏɢ: {blog}
-ʟᴏᴄᴀᴛɪᴏɴ: {location}
-ғᴏʟʟᴏᴡᴇʀs: {followers}
-ғᴏʟʟᴏᴡɪɴɢ: {following}"""
+🔸ᴜsᴇʀɴᴀᴍᴇ: {username}
+▫️ʙɪᴏ: {bio}
+▪️ʟɪɴᴋ: [Here]({url})
+🔸ᴄᴏᴍᴩᴀɴʏ: {company}
+▫️ᴄʀᴇᴀᴛᴇᴅ ᴏɴ: {created_at}
+▪️ʀᴇᴩᴏsɪᴛᴏʀɪᴇs: {repositories}
+🔸ʙʟᴏɢ: {blog}
+▫️ʟᴏᴄᴀᴛɪᴏɴ: {location}
+▪️ғᴏʟʟᴏᴡᴇʀs: {followers}
+🔸ғᴏʟʟᴏᴡɪɴɢ: {following}"""
 
             except Exception as e:
                 print(str(e))

@@ -628,4 +628,4 @@ class Call(PyTgCalls):
             await self.play(client, update.chat_id)
 
 
-VIP = Call()
+SHUKLA = Call()

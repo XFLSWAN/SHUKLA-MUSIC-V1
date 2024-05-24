@@ -1,8 +1,8 @@
 import asyncio
 import datetime
-from VIPMUSIC import app
+from SHUKLAMUSIC import app
 from pyrogram import Client
-from VIPMUSIC.utils.database import get_served_chats
+from SHUKLAMUSIC.utils.database import get_served_chats
 from config import START_IMG_URL, AUTO_GCAST_MSG, AUTO_GCAST, LOGGER_ID
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 

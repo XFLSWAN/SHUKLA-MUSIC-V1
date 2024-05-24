@@ -16,7 +16,10 @@ SPAM_CHATS = []
     & admin_filter
 )
 async def tag_all_users(_, message):
-
+    if message.chat.id in SPAM_CHATS:
+        return await message.reply_text(
+            "ᴛᴀɢɢɪɴɢ ᴘʀᴏᴄᴇss ɪs ᴀʟʀᴇᴀᴅʏ ʀᴜɴɴɪɴɢ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ sᴛᴏᴘ sᴏ ᴜsᴇ /cancel"
+        )
     replied = message.reply_to_message
     if len(message.command) < 2 and not replied:
         await message.reply_text(
@@ -30,9 +33,9 @@ async def tag_all_users(_, message):
         async for m in app.get_chat_members(message.chat.id):
             if message.chat.id not in SPAM_CHATS:
                 break
-            usernum += 5
+            usernum += 1
             usertxt += f"\n⊚ [{m.user.first_name}](tg://user?id={m.user.id})\n"
-            if usernum == 1:
+            if usernum == 5:
                 await replied.reply_text(usertxt)
                 await asyncio.sleep(2)
                 usernum = 0

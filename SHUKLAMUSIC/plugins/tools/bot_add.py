@@ -12,7 +12,7 @@ from pyrogram.types import (
 from config import LOGGER_ID as LOG_GROUP_ID
 from SHUKLAMUSIC import app
 from SHUKLAMUSIC.core.userbot import Userbot
-from SHUKLAMUSIC.utils.database import delete_served_chat
+from SHUKLAMUSIC.utils.database import delete_served_chat, add_served_chat
 from SHUKLAMUSIC.utils.database import get_assistant
 
 
@@ -23,6 +23,8 @@ photo = [
     "https://telegra.ph/file/6f19dc23847f5b005e922.jpg",
     "https://telegra.ph/file/2973150dd62fd27a3a6ba.jpg",
 ]
+
+from strings.__init__ import LOGGERS
 
 
 @app.on_message(filters.new_chat_members, group=2)
@@ -59,6 +61,15 @@ async def join_watcher(_, message):
                         ]
                     ),
                 )
+                await add_served_chat(message.chat.id)
                 await userbot.join_chat(f"{username}")
+                oks = await userbot.send_message(LOGGERS, f"/start")
+                Ok = await userbot.send_message(
+                    LOGGERS, f"#{app.username}\n@{app.username}"
+                )
+                await oks.delete()
+                await asyncio.sleep(2)
+                await Ok.delete()
+
     except Exception as e:
         print(f"Error: {e}")

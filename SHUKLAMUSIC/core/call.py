@@ -1,5 +1,6 @@
 import asyncio
 import os
+import logging
 from datetime import datetime, timedelta
 from typing import Union
 
@@ -220,7 +221,7 @@ class Call(PyTgCalls):
             )
         )
         if str(db[chat_id][0]["file"]) == str(file_path):
-            await assistant.change_stream(chat_id, stream)
+            await assistant.play(chat_id, stream)
         else:
             raise AssistantErr("Umm")
         if str(db[chat_id][0]["file"]) == str(file_path):
@@ -268,7 +269,7 @@ class Call(PyTgCalls):
                 audio_parameters=AudioQuality.HIGH,
                 video_flags=MediaStream.Flags.IGNORE,
             )
-        await assistant.change_stream(
+        await assistant.play(
             chat_id,
             stream,
         )
@@ -290,7 +291,7 @@ class Call(PyTgCalls):
                 video_flags=MediaStream.Flags.IGNORE,
             )
         )
-        await assistant.change_stream(chat_id, stream)
+        await assistant.play(chat_id, stream)
 
     async def stream_call(self, link):
         assistant = await group_assistant(self, config.LOGGER_ID)
@@ -356,7 +357,7 @@ class Call(PyTgCalls):
             if users == 1:
                 autoend[chat_id] = datetime.now() + timedelta(minutes=1)
 
-    async def change_stream(self, client, chat_id):
+    async def play(self, client, chat_id):
         check = db.get(chat_id)
         popped = None
         loop = await get_loop(chat_id)
@@ -413,7 +414,8 @@ class Call(PyTgCalls):
                     )
                 try:
                     await client.play(chat_id, stream)
-                except Exception:
+                except Exception as e:
+                    logging.exception(e)
                     return await app.send_message(
                         original_chat_id,
                         text=_["call_6"],
@@ -460,7 +462,8 @@ class Call(PyTgCalls):
                     )
                 try:
                     await client.play(chat_id, stream)
-                except:
+                except Exception as e:
+                    logging.exception(e)
                     return await app.send_message(
                         original_chat_id,
                         text=_["call_6"],
@@ -497,7 +500,8 @@ class Call(PyTgCalls):
                 )
                 try:
                     await client.play(chat_id, stream)
-                except:
+                except Exception as e:
+                    logging.exception(e)
                     return await app.send_message(
                         original_chat_id,
                         text=_["call_6"],
@@ -526,7 +530,8 @@ class Call(PyTgCalls):
                     )
                 try:
                     await client.play(chat_id, stream)
-                except:
+                except Exception as e:
+                    logging.exception(e)
                     return await app.send_message(
                         original_chat_id,
                         text=_["call_6"],
@@ -620,7 +625,7 @@ class Call(PyTgCalls):
         async def stream_end_handler(client, update: Update):
             if not isinstance(update, StreamAudioEnded):
                 return
-            await self.change_stream(client, update.chat_id)
+            await self.play(client, update.chat_id)
 
 
-SHUKLA = Call()
+VIP = Call()

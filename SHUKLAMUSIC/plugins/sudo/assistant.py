@@ -11,40 +11,26 @@ from SHUKLAMUSIC.utils.database import get_client
 ASSISTANT_PREFIX = "."
 
 
-@app.on_message(filters.command("setpfp", prefixes=ASSISTANT_PREFIX) & SUDOERS)
+@app.on_message(filters.command("setdp", prefixes=ASSISTANT_PREFIX) & SUDOERS)
 async def set_pfp(client, message):
-    from SHUKLAMUSIC.core.userbot import assistants
+    from VIPMUSIC.core.userbot import assistants
 
-    if (
-        not message.reply_to_message
-        or not message.reply_to_message.photo
-        or not message.reply_to_message.video
-    ):
-        return await eor(message, text="Reply to a photo or video")
+    if not message.reply_to_message.photo:
+        return await eor(message, text="Reply to a photo.")
     for num in assistants:
         client = await get_client(num)
         photo = await message.reply_to_message.download()
-        if message.reply_to_message.photo:
-            try:
-                await client.set_profile_photo(photo=photo)
-                await eor(message, text="Successfully Changed PFP.")
-                os.remove(photo)
-            except Exception as e:
-                await eor(message, text=e)
-                os.remove(photo)
-        if message.reply_to_message.video:
-            try:
-                await client.set_profile_photo(video=photo)
-                await eor(message, text="Successfully Changed PFP.")
-                os.remove(photo)
-            except Exception as e:
-                await eor(message, text=e)
-                os.remove(photo)
+        try:
+            await client.set_profile_photo(photo=photo)
+            await eor(message, text="Successfully Changed PFP.")
+            os.remove(photo)
+        except Exception as e:
+            await eor(message, text=e)
 
 
 @app.on_message(filters.command("setbio", prefixes=ASSISTANT_PREFIX) & SUDOERS)
 async def set_bio(client, message):
-    from SHUKLAMUSIC.core.userbot import assistants
+    from VIPMUSIC.core.userbot import assistants
 
     if len(message.command) == 1:
         return await eor(message, text="Give some text to set as bio.")
@@ -80,7 +66,7 @@ async def set_name(client, message):
         return await eor(message, text="Give some text to set as name.")
 
 
-@app.on_message(filters.command("delpfp", prefixes=ASSISTANT_PREFIX) & SUDOERS)
+@app.on_message(filters.command("deldp", prefixes=ASSISTANT_PREFIX) & SUDOERS)
 async def del_pfp(client, message):
     from SHUKLAMUSIC.core.userbot import assistants
 
@@ -97,7 +83,7 @@ async def del_pfp(client, message):
             await eor(message, text=e)
 
 
-@app.on_message(filters.command("delallpfp", prefixes=ASSISTANT_PREFIX) & SUDOERS)
+@app.on_message(filters.command("delalldp", prefixes=ASSISTANT_PREFIX) & SUDOERS)
 async def delall_pfp(client, message):
     from SHUKLAMUSIC.core.userbot import assistants
 

@@ -13,7 +13,7 @@ ASSISTANT_PREFIX = "."
 
 @app.on_message(filters.command("setdp", prefixes=ASSISTANT_PREFIX) & SUDOERS)
 async def set_pfp(client, message):
-    from VIPMUSIC.core.userbot import assistants
+    from SHUKLAMUSIC.core.userbot import assistants
 
     if not message.reply_to_message.photo:
         return await eor(message, text="Reply to a photo.")
@@ -30,7 +30,7 @@ async def set_pfp(client, message):
 
 @app.on_message(filters.command("setbio", prefixes=ASSISTANT_PREFIX) & SUDOERS)
 async def set_bio(client, message):
-    from VIPMUSIC.core.userbot import assistants
+    from SHUKLAMUSIC.core.userbot import assistants
 
     if len(message.command) == 1:
         return await eor(message, text="Give some text to set as bio.")

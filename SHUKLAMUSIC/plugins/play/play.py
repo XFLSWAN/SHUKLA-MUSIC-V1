@@ -385,7 +385,7 @@ async def play_commnd(
             return await mystic.delete()
         else:
             try:
-                await SHUKLA.stream_call(url)
+                await VIP.stream_call(url)
             except NoActiveGroupCall:
                 await mystic.edit_text(_["black_9"])
                 return await app.send_message(
@@ -613,8 +613,8 @@ async def play_music(client, CallbackQuery, _):
     return await mystic.delete()
 
 
-@app.on_callback_query(filters.regex("SHUKLAmousAdmin") & ~BANNED_USERS)
-async def SHUKLAmous_check(client, CallbackQuery):
+@app.on_callback_query(filters.regex("VIPmousAdmin") & ~BANNED_USERS)
+async def VIPmous_check(client, CallbackQuery):
     try:
         await CallbackQuery.answer(
             "» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ :\n\nᴏᴘᴇɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs.\n-> ᴀᴅᴍɪɴɪsᴛʀᴀᴛᴏʀs\n-> ᴄʟɪᴄᴋ ᴏɴ ʏᴏᴜʀ ɴᴀᴍᴇ\n-> ᴜɴᴄʜᴇᴄᴋ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴs.",
@@ -624,7 +624,7 @@ async def SHUKLAmous_check(client, CallbackQuery):
         pass
 
 
-@app.on_callback_query(filters.regex("SHUKLAPlaylists") & ~BANNED_USERS)
+@app.on_callback_query(filters.regex("VIPPlaylists") & ~BANNED_USERS)
 @languageCB
 async def play_playlists_command(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
@@ -800,7 +800,7 @@ async def stream(
     if not result:
         return
     if forceplay:
-        await SHUKLA.force_stop_stream(chat_id)
+        await VIP.force_stop_stream(chat_id)
     if streamtype == "playlist":
         msg = f"{_['play_19']}\n\n"
         count = 0
@@ -848,7 +848,7 @@ async def stream(
                 except:
 
                     await mystic.edit_text(_["play_3"])
-                await SHUKLA.join_call(
+                await VIP.join_call(
                     chat_id,
                     original_chat_id,
                     file_path,
@@ -886,7 +886,7 @@ async def stream(
         if count == 0:
             return
         else:
-            link = await SHUKLABin(msg)
+            link = await VIPBin(msg)
             lines = msg.count("\n")
             if lines >= 17:
                 car = os.linesep.join(msg.split(os.linesep)[:17])
@@ -940,7 +940,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await SHUKLA.join_call(
+            await VIP.join_call(
                 chat_id,
                 original_chat_id,
                 file_path,

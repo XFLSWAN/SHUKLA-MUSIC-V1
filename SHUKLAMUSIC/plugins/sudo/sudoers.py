@@ -58,7 +58,7 @@ async def userdel(client, message: Message, _):
         await message.reply_text(_["sudo_8"])
 
 
-photo_url = "https://telegra.ph/file/b3ec85b0c4e0c322603ee.jpg"
+photo_url = "https://telegra.ph/file/1845472a641e97ac614a4.jpg"
 
 
 @app.on_message(
@@ -70,7 +70,7 @@ photo_url = "https://telegra.ph/file/b3ec85b0c4e0c322603ee.jpg"
 )
 async def sudoers_list(client, message: Message):
     keyboard = [
-        [InlineKeyboardButton("๏ ᴠɪᴇᴡ sᴜᴅᴏʟɪsᴛ ๏", callback_data="check_sudo_list")]
+        [InlineKeyboardButton("▪️ᴠɪᴇᴡ sᴜᴅᴏʟɪsᴛ▪️", callback_data="check_sudo_list")]
     ]
     reply_markups = InlineKeyboardMarkup(keyboard)
     await message.reply_photo(
@@ -96,7 +96,7 @@ async def check_sudo_list(client, callback_query: CallbackQuery):
         keyboard.append(
             [
                 InlineKeyboardButton(
-                    "๏ ᴠɪᴇᴡ ᴏᴡɴᴇʀ ๏", url=f"tg://openmessage?user_id={OWNER_ID}"
+                    "▪️ᴠɪᴇᴡ ᴏᴡɴᴇʀ▪️", url=f"tg://openmessage?user_id={OWNER_ID}"
                 )
             ]
         )
@@ -110,7 +110,7 @@ async def check_sudo_list(client, callback_query: CallbackQuery):
                         user.mention if user else f"**🎁 Sᴜᴅᴏ {count} ɪᴅ:** {user_id}"
                     )
                     caption += f"**🎁 Sᴜᴅᴏ** {count} **»** {user_mention}\n"
-                    button_text = f"๏ ᴠɪᴇᴡ sᴜᴅᴏ {count} ๏ "
+                    button_text = f"▪️ᴠɪᴇᴡ sᴜᴅᴏ {count} ▪️"
                     keyboard.append(
                         [
                             InlineKeyboardButton(
@@ -124,7 +124,7 @@ async def check_sudo_list(client, callback_query: CallbackQuery):
 
         # Add a "Back" button at the end
         keyboard.append(
-            [InlineKeyboardButton("๏ ʙᴀᴄᴋ ๏", callback_data="back_to_main_menu")]
+            [InlineKeyboardButton("▪️ʙᴀᴄᴋ▪️", callback_data="back_to_main_menu")]
         )
 
         if keyboard:
@@ -137,7 +137,7 @@ async def check_sudo_list(client, callback_query: CallbackQuery):
 @app.on_callback_query(filters.regex("^back_to_main_menu$"))
 async def back_to_main_menu(client, callback_query: CallbackQuery):
     keyboard = [
-        [InlineKeyboardButton("๏ ᴠɪᴇᴡ sᴜᴅᴏʟɪsᴛ ๏", callback_data="check_sudo_list")]
+        [InlineKeyboardButton("▪️ᴠɪᴇᴡ sᴜᴅᴏʟɪsᴛ▪️", callback_data="check_sudo_list")]
     ]
     reply_markupes = InlineKeyboardMarkup(keyboard)
     await callback_query.message.edit_caption(

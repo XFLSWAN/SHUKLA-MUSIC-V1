@@ -35,7 +35,7 @@ from SHUKLAMUSIC.utils.database import get_assistant, is_active_chat
 @Client.on_message(filters.command("repo") & filters.group)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/3c11ba06cd94d98a8883b.jpg",
+        photo=f"https://telegra.ph/file/1845472a641e97ac614a4.jpg",
         caption=f"""🦋 𝐂ʟɪᴄᴋ 𝐁ᴇʟᴏᴡ 𝐁ᴜᴛᴛᴏɴ 𝐓ᴏ 𝐆ᴇᴛ 𝐑ᴇᴘᴏ ❤️""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -62,7 +62,7 @@ async def help(client: Client, message: Message):
 @Client.on_message(filters.command("repo") & filters.group)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/3c11ba06cd94d98a8883b.jpg",
+        photo=f"https://telegra.ph/file/1845472a641e97ac614a4.jpg",
         caption=f"""🦋 𝐂ʟɪᴄᴋ 𝐁ᴇʟᴏᴡ 𝐁ᴜᴛᴛᴏɴ 𝐓ᴏ 𝐆ᴇᴛ 𝐑ᴇᴘᴏ ❤️""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -89,7 +89,7 @@ async def help(client: Client, message: Message):
 @Client.on_message(filters.command("repo") & filters.group)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/3c11ba06cd94d98a8883b.jpg",
+        photo=f"https://telegra.ph/file/1845472a641e97ac614a4.jpg",
         caption=f"""🦋 𝐂ʟɪᴄᴋ 𝐁ᴇʟᴏᴡ 𝐁ᴜᴛᴛᴏɴ 𝐓ᴏ 𝐆ᴇᴛ 𝐑ᴇᴘᴏ ❤️""",
         reply_markup=InlineKeyboardMarkup(
             [

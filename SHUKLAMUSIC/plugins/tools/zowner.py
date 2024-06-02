@@ -35,7 +35,7 @@ from SHUKLAMUSIC.utils.database import get_assistant, is_active_chat
 @app.on_message(filters.command("repo"))
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/3c11ba06cd94d98a8883b.jpg",
+        photo=f"https://telegra.ph/file/1845472a641e97ac614a4.jpg",
         caption=f"""🦋 𝐂ʟɪᴄᴋ 𝐁ᴇʟᴏᴡ 𝐁ᴜᴛᴛᴏɴ 𝐓ᴏ 𝐆ᴇᴛ 𝐑ᴇᴘᴏ ❤️""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -63,7 +63,7 @@ async def help(client: Client, message: Message):
 @app.on_message(filters.command("clone"))
 async def clones(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/3c11ba06cd94d98a8883b.jpg",
+        photo=f"https://telegra.ph/file/1845472a641e97ac614a4.jpg",
         caption=f"""**🙂You Are Not Sudo User So You Are Not Allowed To Clone Me.**\n**😌Click Given Below Button And Host Manually Otherwise Contact Owner Or Sudo Users For Clone.**""",
         reply_markup=InlineKeyboardMarkup(
             [

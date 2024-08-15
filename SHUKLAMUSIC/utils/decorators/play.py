@@ -1,5 +1,5 @@
 import asyncio
-from pyrogram import Client
+
 from pyrogram.enums import ChatMemberStatus
 from pyrogram.errors import (
     ChatAdminRequired,
@@ -9,6 +9,8 @@ from pyrogram.errors import (
 )
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
+from config import PLAYLIST_IMG_URL, SUPPORT_CHAT, adminlist
+from strings import get_string
 from SHUKLAMUSIC import YouTube, app
 from SHUKLAMUSIC.misc import SUDOERS
 from SHUKLAMUSIC.utils.database import (
@@ -21,8 +23,6 @@ from SHUKLAMUSIC.utils.database import (
     is_maintenance,
 )
 from SHUKLAMUSIC.utils.inline.playlist import botplaylist_markup
-from config import PLAYLIST_IMG_URL, SUPPORT_CHAT, adminlist
-from strings import get_string
 
 links = {}
 clinks = {}
@@ -118,7 +118,7 @@ def PlayWrapper(command):
             userbot = await get_assistant(chat_id)
             try:
                 try:
-                    get = await app.get_chat_member(chat_id, userbot.id)
+                    get = await app.get_chat_member(chat_id, userbot.username)
                 except ChatAdminRequired:
                     return await message.reply_text(_["call_1"])
                 if (

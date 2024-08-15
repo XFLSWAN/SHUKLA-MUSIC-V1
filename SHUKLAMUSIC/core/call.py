@@ -3,16 +3,23 @@ import os
 from datetime import datetime, timedelta
 from typing import Union
 
-from ntgcalls import TelegramServerError
 from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup
+from ntgcalls import TelegramServerError
 from pytgcalls import PyTgCalls
-from pytgcalls.exceptions import AlreadyJoinedError, NoActiveGroupCall
-from pytgcalls.types import AudioQuality, MediaStream, Update, VideoQuality
+from pytgcalls.exceptions import (
+    AlreadyJoinedError,
+    NoActiveGroupCall,
+)
+from pytgcalls.types import (
+    MediaStream,
+    AudioQuality,
+    VideoQuality,
+    Update,
+)
 from pytgcalls.types.stream import StreamAudioEnded
 
 import config
-from strings import get_string
 from SHUKLAMUSIC import LOGGER, YouTube, app
 from SHUKLAMUSIC.misc import db
 from SHUKLAMUSIC.utils.database import (
@@ -32,6 +39,7 @@ from SHUKLAMUSIC.utils.formatters import check_duration, seconds_to_min, speed_c
 from SHUKLAMUSIC.utils.inline.play import stream_markup, stream_markup2
 from SHUKLAMUSIC.utils.stream.autoclear import auto_clean
 from SHUKLAMUSIC.utils.thumbnails import get_thumb
+from strings import get_string
 
 autoend = {}
 counter = {}
@@ -47,7 +55,7 @@ async def _clear_(chat_id):
 class Call(PyTgCalls):
     def __init__(self):
         self.userbot1 = Client(
-            name="SHUKLAAss1",
+            name="Spotify_Music1",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING1),
@@ -57,7 +65,7 @@ class Call(PyTgCalls):
             cache_duration=100,
         )
         self.userbot2 = Client(
-            name="SHUKLAAss2",
+            name="Spotify_Music2",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING2),
@@ -67,7 +75,7 @@ class Call(PyTgCalls):
             cache_duration=100,
         )
         self.userbot3 = Client(
-            name="SHUKLAAss3",
+            name="Spotify_Music3",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING3),
@@ -77,7 +85,7 @@ class Call(PyTgCalls):
             cache_duration=100,
         )
         self.userbot4 = Client(
-            name="SHUKLAAss4",
+            name="Spotify_Music4",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING4),
@@ -87,7 +95,7 @@ class Call(PyTgCalls):
             cache_duration=100,
         )
         self.userbot5 = Client(
-            name="SHUKLAAss5",
+            name="Spotify_Music5",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING5),

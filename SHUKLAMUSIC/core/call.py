@@ -19,7 +19,7 @@ from pytgcalls.types.stream import StreamAudioEnded
 import config
 from SHUKLAMUSIC import LOGGER, YouTube, app
 from SHUKLAMUSIC.misc import db
-from SHUKLA.utils.database import (
+from SHUKLAMUSIC.utils.database import (
     add_active_chat,
     add_active_video_chat,
     get_lang,

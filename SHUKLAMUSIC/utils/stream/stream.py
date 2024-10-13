@@ -88,7 +88,7 @@ async def stream(
                 except:
                     return await mystic.delete()
 
-                await BAD.join_call(
+                await SHUKLA.join_call(
                     chat_id, original_chat_id, file_path, video=status, image=thumbnail
                 )
                 await put_queue(
@@ -121,7 +121,7 @@ async def stream(
         if count == 0:
             return
         else:
-            link = await BADbin(msg)
+            link = await SHUKLAbin(msg)
             lines = msg.count("\n")
             if lines >= 17:
                 car = os.linesep.join(msg.split(os.linesep)[:17])

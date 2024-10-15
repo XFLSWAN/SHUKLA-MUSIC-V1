@@ -65,10 +65,10 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "▪️𝚂𝚄𝙿𝙿𝙾𝚁𝚃▪️", url=f"https://t.me/Inflex_Support"
+                        "▪️𝚂𝚄𝙿𝙿𝙾𝚁𝚃▪️", url=f"https://t.me/MASTIWITHFRIENDSXD"
                     ),
                     InlineKeyboardButton(
-                        "▪️𝙾𝙵𝙵𝙸𝙲𝙴▪️", url=f"https://t.me/Inflexupdate"
+                        "▪️𝙾𝙵𝙵𝙸𝙲𝙴▪️", url=f"https://t.me/SHIVANSH474"
                     ),
                 ]
             ]
@@ -84,10 +84,10 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "▪️𝚂𝚄𝙿𝙿𝙾𝚁𝚃▪️", url=f"https://t.me/Inflex_Support"
+                        "▪️𝚂𝚄𝙿𝙿𝙾𝚁𝚃▪️", url=f"https://t.me/MASTIWITHFRIENDSXD"
                     ),
                     InlineKeyboardButton(
-                        "▪️𝙾𝙵𝙵𝙸𝙲𝙴▪️", url=f"https://t.me/Inflexupdate"
+                        "▪️𝙾𝙵𝙵𝙸𝙲𝙴▪️", url=f"https://t.me/SHIVANSH474"
                     ),
                 ]
             ]

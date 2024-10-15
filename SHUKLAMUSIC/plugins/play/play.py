@@ -848,7 +848,7 @@ async def stream(
                 except:
 
                     await mystic.edit_text(_["play_3"])
-                await VIP.join_call(
+                await SHUKLA.join_call(
                     chat_id,
                     original_chat_id,
                     file_path,
